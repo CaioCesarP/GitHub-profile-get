@@ -2,6 +2,7 @@ import { useState } from "react";
 import GlobalStyle from "../css/GlobalStyle";
 import appConfig from "../config.json";
 import Copyright from "./Copyright";
+import { Alert } from "@mui/material";
 import { Box, Text, Image, Button, TextField } from '@skynexui/components';
 
 function HomePage() {
@@ -65,7 +66,7 @@ function HomePage() {
             onClick={(event) => {
               event.preventDefault();
               if(valor === "" || valor === null || valor === undefined || valor.length < 3) {
-                alert("Informe um perfil com mais de 2 caracteres.");
+                <Alert severity="error">Nome de usuário precisa ter acima de 2 caracteres!</Alert>
               } else {
                 setProfile(valor);
               }
