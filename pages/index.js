@@ -23,7 +23,7 @@ function HomePage() {
             flex-wrap= "wrap"
             styleSheet={{
             display: 'flex', alignItems: 'center',
-            justifyContent: 'space-between',
+            justifyContent: 'space-between', flexDirection: 'column',
             width: '100%', maxWidth: '700px',
             borderRadius: '5px', padding: '32px', margin: '16px',
             boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
