@@ -2,7 +2,7 @@ import { useState } from "react";
 import GlobalStyle from "../css/GlobalStyle";
 import appConfig from "../config.json";
 import Copyright from "./Copyright";
-import { Box, Text, Image, Button, TextField, GridDisplay } from '@skynexui/components';
+import { Box, Text, Image, Button, TextField } from '@skynexui/components';
 
 function HomePage() {
 
@@ -24,7 +24,7 @@ function HomePage() {
             styleSheet={{
             display: 'flex', alignItems: 'center',
             justifyContent: 'space-between', flexDirection: 'column',
-            width: '100%', maxWidth: '700px',
+            width: '100%', maxWidth: '500px',
             borderRadius: '5px', padding: '32px', margin: '16px',
             boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
             backgroundColor: appConfig.theme.colors.neutrals[700],
@@ -37,7 +37,7 @@ function HomePage() {
             as="form"
             styleSheet={{
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-              width: { xs: '100%', sm: '50%' }, textAlign: 'center', marginBottom: '32px', backgroundColor: appConfig.theme.colors.neutrals[700],
+              width: { xs: '100%', sm: '70%' }, textAlign: 'center', marginBottom: '32px', backgroundColor: appConfig.theme.colors.neutrals[700],
             }}
           >
             <h2>🧑‍💻 GitHub Profile 🧑‍💻</h2>
@@ -64,7 +64,6 @@ function HomePage() {
             label="PESQUISAR"
             onClick={(event) => {
               event.preventDefault();
-              console.log(valor)
               if(valor === "" || valor === null || valor === undefined || valor.length < 3) {
                 alert("Informe um perfil com mais de 2 caracteres.");
               } else {
@@ -124,4 +123,4 @@ function HomePage() {
     );
   }
 
-export default HomePage;  
+export default HomePage;
