@@ -115,7 +115,7 @@ function HomePage() {
 
           {/* profile */}
 
-          {/* <Copyright /> */}
+          <Copyright />
 
         </Box>
       </Box>
